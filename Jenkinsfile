@@ -17,7 +17,7 @@ pipeline {
       }
       stage('Build') {
          steps {
-            sh '''echo No build required for Webapp - it's already built in the dist directory. This is just to avoid having to configure angular in Jenkins, but usually the build step would be done here.'''
+            sh 'echo No build required for Webapp.'
          }
       }
 
