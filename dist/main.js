@@ -599,7 +599,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\cygwin64\home\Richard\new-k8s-fleetman\k8s-fleetman\k8s-fleetman-webapp-angular\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\cygwin64\home\Richard\fleetman-ci-cd-demo\fleetman-webapp\src\main.ts */"./src/main.ts");
 
 
 /***/ })

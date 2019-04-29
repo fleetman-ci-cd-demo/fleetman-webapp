@@ -662,10 +662,10 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\cygwin64\home\Richard\new-k8s-fleetman\k8s-fleetman\k8s-fleetman-webapp-angular\src\styles.css */"./src/styles.css");
-__webpack_require__(/*! C:\cygwin64\home\Richard\new-k8s-fleetman\k8s-fleetman\k8s-fleetman-webapp-angular\node_modules\leaflet\dist\leaflet.css */"./node_modules/leaflet/dist/leaflet.css");
-__webpack_require__(/*! C:\cygwin64\home\Richard\new-k8s-fleetman\k8s-fleetman\k8s-fleetman-webapp-angular\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! C:\cygwin64\home\Richard\new-k8s-fleetman\k8s-fleetman\k8s-fleetman-webapp-angular\node_modules\font-awesome\css\font-awesome.min.css */"./node_modules/font-awesome/css/font-awesome.min.css");
+__webpack_require__(/*! C:\cygwin64\home\Richard\fleetman-ci-cd-demo\fleetman-webapp\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\cygwin64\home\Richard\fleetman-ci-cd-demo\fleetman-webapp\node_modules\leaflet\dist\leaflet.css */"./node_modules/leaflet/dist/leaflet.css");
+__webpack_require__(/*! C:\cygwin64\home\Richard\fleetman-ci-cd-demo\fleetman-webapp\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! C:\cygwin64\home\Richard\fleetman-ci-cd-demo\fleetman-webapp\node_modules\font-awesome\css\font-awesome.min.css */"./node_modules/font-awesome/css/font-awesome.min.css");
 
 
 /***/ })
