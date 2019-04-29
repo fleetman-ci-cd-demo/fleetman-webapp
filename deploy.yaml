@@ -20,6 +20,10 @@ spec:
           value: production-microservice
         image: virtualpairprogrammers/fleetman-ci-cd-demo-fleetman-webapp:${BUILD_ID}
         imagePullPolicy: Never
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
 ---
 apiVersion: v1
 kind: Service
