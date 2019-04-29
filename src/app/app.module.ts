@@ -19,7 +19,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DOCUMENT } from '@angular/platform-browser';
 
 const stompConfig: StompConfig = {
-     url: "wss://" + window.location.hostname + ":" + window.location.port + "/api/updates",
+     url: "ws://" + window.location.hostname + ":" + window.location.port + "/api/updates",
      // TODO will reinstate when dev complete.
      headers: {
      },
