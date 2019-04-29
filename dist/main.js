@@ -120,7 +120,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var stompConfig = {
-    url: "ws://" + window.location.hostname + ":" + window.location.port + "/api/updates",
+    url: "wss://" + window.location.hostname + ":" + window.location.port + "/api/updates",
+    // TODO will reinstate when dev complete.
     headers: {},
     heartbeat_in: 0,
     heartbeat_out: 20000,
@@ -178,7 +179,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-1\">\n  <a class=\"navbar-brand col-sm-3 col-md-2 mr-0\" href=\"#\">Fleet Management System R2</a>\n  <ul class=\"navbar-nav flex-row\">\n    <li class=\"nav-item\">\n      <a class=\"nav-link p-2\" href=\"https://github.com/DickChesterwood/k8s-fleetman\"><span class=\"fa fa-2x fa-github\"></span></a>\n    </li>\n    <li>\n      <a class=\"nav-link p-2\" href=\"https://twitter.com/RichChesterwood\"><span class=\"fa fa-2x fa-twitter\"></span></a>\n    </li>\n    <li>\n      <a class=\"nav-link p-2\" href=\"http://blog.chesterwood.io\"><span class=\"fa fa-2x fa-rss\"></span></a>\n    </li>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-1\">\n  <a class=\"navbar-brand col-sm-3 col-md-2 mr-0\" href=\"#\">Fleet Management System R2 SSL Version</a>\n  <ul class=\"navbar-nav flex-row\">\n    <li class=\"nav-item\">\n      <a class=\"nav-link p-2\" href=\"https://github.com/DickChesterwood/k8s-fleetman\"><span class=\"fa fa-2x fa-github\"></span></a>\n    </li>\n    <li>\n      <a class=\"nav-link p-2\" href=\"https://twitter.com/RichChesterwood\"><span class=\"fa fa-2x fa-twitter\"></span></a>\n    </li>\n    <li>\n      <a class=\"nav-link p-2\" href=\"http://blog.chesterwood.io\"><span class=\"fa fa-2x fa-rss\"></span></a>\n    </li>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -404,13 +405,15 @@ var VehicleService = /** @class */ (function () {
         messages.subscribe(this.onMessage);
     };
     VehicleService.prototype.updateCenterVehicle = function (centerVehicle) {
+        var _this = this;
         this.centerVehicle.next(centerVehicle);
         if (centerVehicle == null) {
             this.centerVehicleHistory.next(null);
         }
         else {
             // call API gateway, get the history for this vehicle.
-            this.http.get("http://" + window.location.hostname + ":" + window.location.port + "/api/history/" + centerVehicle.name);
+            this.http.get("https://" + window.location.hostname + ":" + window.location.port + "/api/history/" + centerVehicle.name)
+                .subscribe(function (data) { return _this.centerVehicleHistory.next(data); });
         }
     };
     VehicleService = __decorate([
@@ -596,7 +599,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\cygwin64\home\Richard\fleetman-ci-cd-demo\fleetman-webapp\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\cygwin64\home\Richard\new-k8s-fleetman\k8s-fleetman\k8s-fleetman-webapp-angular\src\main.ts */"./src/main.ts");
 
 
 /***/ })

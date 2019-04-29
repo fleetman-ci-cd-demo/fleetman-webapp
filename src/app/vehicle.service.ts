@@ -56,7 +56,8 @@ export class VehicleService  {
     else
     {
       // call API gateway, get the history for this vehicle.
-      this.http.get("http://" + window.location.hostname + ":" + window.location.port + "/api/history/" + centerVehicle.name);
+      this.http.get("https://" + window.location.hostname + ":" + window.location.port + "/api/history/" + centerVehicle.name)
+         .subscribe( data => this.centerVehicleHistory.next(data));
     }
   }
 }
