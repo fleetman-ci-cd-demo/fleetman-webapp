@@ -1,6 +1,7 @@
 # K8sFleetmanWebappAngular
 
-This is an experimental project to port the front end to Angular.Update
+This is an experimental project to port the front end to Angular. Test with PR
+
 
 It's temporarily on hold, as some very minor problems got in the way. For example, the Moving Marker that we rely on doesn't have any native integration with Angular and it would take us too long to unpick how to do it. 
 
